@@ -1,0 +1,791 @@
+/* =========================
+   BASE AGENCE WEB ++
+========================= */
+body::before {
+  content: "🐾";
+  position: fixed;
+  font-size: 200px;
+  opacity: 0.03;
+  top: 10%;
+  left: 5%;
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  background: #f5f2ec;
+  color: #243224;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER AGENCE
+========================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 50px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e6dfd6;
+}
+
+/* NAV ULTRA PRO */
+nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3a4a3a;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  transition: 0.25s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #6d8b74;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #6d8b74;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* BOUTON CTA */
+.btn {
+  background: linear-gradient(135deg, #6d8b74, #4f6b58);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(109,139,116,0.25);
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(109,139,116,0.35);
+}
+
+/* =========================
+   HERO AGENCE
+========================= */
+.hero {
+  text-align: center;
+  padding: 130px 20px;
+  background: radial-gradient(circle at top, #e7efe4, #f5f2ec);
+}
+
+.hero h1 {
+font-family: "Playfair Display", serif;
+  font-size: 62px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.slogan {
+  font-style: italic;
+  color: #5b6b5b;
+  margin-top: 10px;
+}
+
+/* =========================
+   SECTIONS STRUCTURE AGENCE
+========================= */
+.section {
+  padding: 90px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 3px;
+  background: #6d8b74;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+/* =========================
+   CARTES PREMIUM
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   BLOC BALADES PREMIUM
+========================= */
+.highlight {
+  background: linear-gradient(135deg, #dfe9d8, #f4f8f1);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   TARIFS AGENCE
+========================= */
+.tarifs li {
+  background: white;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* =========================
+   FORMULAIRE ULTRA PRO
+========================= */
+form {
+  display: grid;
+  gap: 15px;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+input, select, textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6d8b74;
+  box-shadow: 0 0 0 3px rgba(109,139,116,0.15);
+  outline: none;
+}
+
+/* =========================
+   FOOTER AGENCE
+========================= */
+footer {
+  text-align: center;
+  padding: 35px;
+  background: white;
+  margin-top: 60px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================
+   ANIMATION LÉGÈRE PRO
+========================= */
+.section {
+  animation: fadeUp 0.7s ease-in-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   MOBILE HEADER CLEAN
+========================= */
+@media (max-width: 768px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav a {
+    font-size: 11px;
+    white-space: nowrap;
+    padding: 6px 8px;
+  }
+
+  /* ❌ on cache le bouton du header sur mobile */
+  header .btn {
+    display: none;
+  }
+}
+
+/* =========================
+   BOUTON FIXE MOBILE (CTA)
+========================= */
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+  }
+
+  .mobile-cta a {
+    background: linear-gradient(135deg, #6d8b74, #4f6b58);
+    color: white;
+    padding: 14px 22px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.2s;
+  }
+
+  .mobile-cta a:active {
+    transform: scale(0.95);
+  }
+}
+
+  /* AMÉLIO UX GÉNÉRALE */
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+.balade-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* CONTENEUR ADAPTATIF */
+.img-container {
+  display: inline-block;   /* 👈 s’adapte à l’image */
+  background: #f5f2ec;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* IMAGE NATURELLE */
+.img-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;   /* 👈 garde le ratio réel */
+}
+
+/* ===== HEADER TITRE ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e6dfd6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* TITRE DANS HEADER */
+.site-name {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #2f3b2f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.site-name:hover {
+  color: #6d8b74;
+}
+
+/* ===== LOGO CENTRÉ (HERO) ===== */
+.hero-brand {
+  text-align: center;
+  padding: 40px 20px 10px; /* 👈 réduit l’espace vide */
+margin-bottom: 0;
+}
+
+.hero-brand img {
+  width: 80vw;        /* 👈 prend presque toute la largeur écran */
+  max-width: 900px;   /* limite propre sur grand écran */
+  height: auto;
+  display: inline-block;
+animation: fadeIn 1.2s ease-out;
+}
+.hero-final + .section {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-brand img {
+    max-width: 380px;
+  }
+}
+
+.slogan {
+  font-style: italic;
+  color: #5b6b5b;
+  margin-bottom: 20px;
+}
+
+.hero-final {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LOGO À GAUCHE (PLUS GRAND) */
+.hero-logo img {
+  width: 100%;
+  max-width: 500px;   /* 👈 tu peux encore augmenter ici */
+  height: auto;
+  animation: fadeIn 1s ease-out;
+}
+
+/* TEXTE À DROITE */
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.accroche {
+  font-size: 18px;
+  color: #4a5a4a;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+
+  .hero-final {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-logo img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+}
+
+.cards .card {
+  cursor: default; /* 👈 IMPORTANT : enlève effet bouton */
+}
+
+.cards .card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #2f3b2f;
+}
+
+.cards .card p {
+  font-size: 14px;
+  color: #4a5a4a;
+}
+
+.cards .card span {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #6d8b74;
+}
+
+/* CTA clair en bas */
+.services-cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.tarifs {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: auto;
+}
+
+.tarifs li {
+  background: white;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.site-footer {
+  background: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+  border-top: 1px solid #e6dfd6;
+  color: #4a5a4a;
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #6d8b74;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 15px;
+}
+
+.social-link {
+  display: inline-block;
+  font-size: 16px;        /* 👈 plus petit */
+  padding: 3px 8px;       /* 👈 beaucoup plus léger */
+  margin-right: 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #4a5a4a;
+  border: 1px solid transparent; /* 👈 presque invisible */
+  transition: 0.2s;
+}
+
+.social-link:hover {
+  color: #6d8b74;
+  border-color: #6d8b74;
+  background: transparent; /* 👈 pas de bloc coloré */
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  padding: 3px 8px;
+  margin-right: 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #4a5a4a;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+
+/* HOVER GLOBAL */
+.social-icon:hover {
+  transform: translateY(-1px);
+}
+
+/* COULEURS AU HOVER */
+.social-icon.instagram:hover {
+  color: #e1306c;
+}
+
+.social-icon.facebook:hover {
+  color: #1877f2;
+}
+
+.social-icon.whatsapp:hover {
+  color: #25D366;
+}
+
+.tarif-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.tarif-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: 0.25s;
+  text-align: center;
+}
+
+.tarif-card:hover {
+  transform: translateY(-5px);
+}
+
+.tarif-card h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #2f3b2f;
+}
+
+.tarif-card p {
+  font-size: 13px;
+  color: #5a6a5a;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6d8b74;
+}
+
+.highlight-price {
+  border: 2px solid #6d8b74;
+  background: #f4f8f1;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+form label {
+  font-size: 12px;
+  color: #5a6a5a;
+  margin-top: 5px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 90px;
+}
+
+form button {
+  background: #6d8b74;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form button:hover {
+  background: #4f6b58;
+  transform: translateY(-2px);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  animation: zoomIn 0.2s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.gallery img {
+  cursor: zoom-in;
+}
+
+/* bouton hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* desktop */
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    gap: 10px;
+
+    /* caché par défaut */
+    display: none;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 12px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}
+.tarif-info{
+    max-width:700px;
+    margin:35px auto 10px;
+    padding:15px 20px;
+    background:#f7f7f2;
+    border-left:4px solid #8ca87c;
+    border-radius:8px;
+    color:#4a5a4a;
+    line-height:1.6;
+    text-align:left;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Poitoutous - Pet sitting & balades</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="site-name">
+    Les Poitoutous
+</a>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="nav-menu">
+  <a href="index.html">Accueil</a>
+  <a href="apropos.html">À propos</a>
+  <a href="tarifs.html">Tarifs</a>
+  <a href="devis.html">Devis / Disponibilités</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+
+  <a class="btn" href="devis.html#devis">Demander un devis</a>
+</header>
+
+<section class="section">
+
+  <h2>Disponibilités & Devis</h2>
+
+  <p>
+    Vous pouvez consulter mes disponibilités ci-dessous et m’envoyer une demande de devis.
+  </p>
+
+  <!-- GOOGLE CALENDAR -->
+  <iframe
+    src="https://calendar.google.com/calendar/embed?src=1ce7ab6c8dba1b6183dc5fb87cc86486482075ad1923e544a75a01868d15db82%40group.calendar.google.com&ctz=Europe%2FParis"
+    style="border:0"
+    width="100%"
+    height="600"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
+
+  <br><br>
+
+  <section id="devis" class="section form">
+  <h2>Demande de devis</h2>
+
+  <form name="devis" method="POST" data-netlify="true" action="/success.html">
+
+  <input type="hidden" name="form-name" value="devis">
+
+  <input type="text" name="nom" placeholder="Nom" required>
+
+  <input type="tel" name="telephone" placeholder="Téléphone" required>
+
+  <input type="email" name="email" placeholder="Email" required>
+
+  <input type="text" name="commune" placeholder="Commune">
+
+  <!-- TYPE DE PRESTATION -->
+  <select name="prestation" required>
+    <option value="">Type de prestation</option>
+    <option>Visite à domicile</option>
+    <option>Garde d’animaux</option>
+    <option>Balade individuelle</option>
+    <option>Balade collective</option>
+  </select>
+
+  <!-- TYPE D'ANIMAL -->
+  <select name="animal" required>
+    <option value="">Type d'animal</option>
+    <option>Chien</option>
+    <option>Chat</option>
+    <option>NAC</option>
+  </select>
+
+  <!-- NOMBRE D'ANIMAUX -->
+  <input type="number" name="nombre_animaux" placeholder="Nombre d’animaux" min="1" required>
+
+  <!-- DATES -->
+  <label>Début de la prestation</label>
+  <input type="date" name="date_debut" required>
+
+  <label>Fin de la prestation</label>
+  <input type="date" name="date_fin">
+<input type="hidden" name="form-name" value="devis">
+
+  <!-- URGENCE -->
+  <select name="urgence">
+    <option>Urgence ?</option>
+    <option>Non</option>
+    <option>Oui (rapide réponse souhaitée)</option>
+  </select>
+
+  <!-- MESSAGE -->
+  <textarea name="message" placeholder="Précisions sur vos besoins (horaires, habitudes, etc.)"></textarea>
+
+  <button type="submit">Envoyer ma demande 🐾</button>
+
+
+
+</form>
+</section>
+
+</section>
+<footer class="site-footer">
+
+  <p><strong>Les Poitoutous</strong></p>
+
+  <p>
+    📞 06 43 92 65 09 <br>
+    📧 lespoitoutous@hotmail.com <br>
+    📍 Saint-Benoît + 20 km autour
+  </p>
+
+  <p class="footer-links">
+    <a href="index.html">Accueil</a> |
+    <a href="apropos.html">À propos</a> |
+    <a href="tarifs.html">Tarifs</a> |
+    <a href="devis.html">Devis</a>
+  </p>
+
+  <p class="copyright">
+    © Les Poitoutous - Pet sitting & balades éducatives
+  </p>
+
+</footer>
+<div class="mobile-cta">
+  <a href="devis.html#devis">🐾 Demander un devis</a>
+</div>
+<script>
+function toggleMenu() {
+  document.getElementById("nav-menu").classList.toggle("active");
+}
+</script>
+</body>
+</html>

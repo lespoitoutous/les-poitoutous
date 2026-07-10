@@ -789,3 +789,25 @@ nav {
     line-height:1.6;
     text-align:left;
 }
+#form-message{
+    margin-top:25px;
+    padding:18px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+    display:none;
+}
+
+#form-message.success{
+    display:block;
+    background:#e8f7e8;
+    color:#2d6a2d;
+    border:1px solid #8cc68c;
+}
+
+#form-message.error{
+    display:block;
+    background:#fdeaea;
+    color:#b00020;
+    border:1px solid #f2a3a3;
+}

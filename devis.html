@@ -49,11 +49,9 @@
   <section id="devis" class="section form">
   <h2>Demande de devis</h2>
 
-  <form name="devis" method="POST" data-netlify="true" action="/success.html">
+  <form action="https://formspree.io/f/xnjkebwl" method="POST">
 
-  <input type="hidden" name="form-name" value="devis">
-
-  <input type="text" name="nom" placeholder="Nom" required>
+  <input type="text" name="nom" placeholder="Votre nom" required>
 
   <input type="tel" name="telephone" placeholder="Téléphone" required>
 
@@ -61,16 +59,9 @@
 
   <input type="text" name="commune" placeholder="Commune">
 
-  <!-- TYPE DE PRESTATION -->
-  <select name="prestation" required>
-    <option value="">Type de prestation</option>
-    <option>Visite à domicile</option>
-    <option>Garde d’animaux</option>
-    <option>Balade individuelle</option>
-    <option>Balade collective</option>
-  </select>
+  <!-- ANIMAL -->
+  <input type="text" name="nom_animal" placeholder="Nom de votre animal" required>
 
-  <!-- TYPE D'ANIMAL -->
   <select name="animal" required>
     <option value="">Type d'animal</option>
     <option>Chien</option>
@@ -78,8 +69,14 @@
     <option>NAC</option>
   </select>
 
-  <!-- NOMBRE D'ANIMAUX -->
-  <input type="number" name="nombre_animaux" placeholder="Nombre d’animaux" min="1" required>
+  <!-- PRESTATION -->
+  <select name="prestation" required>
+    <option value="">Type de prestation</option>
+    <option>Visite 30 min</option>
+    <option>Visite 1h</option>
+    <option>2 visites 30 min</option>
+    <option>Balade collective</option>
+  </select>
 
   <!-- DATES -->
   <label>Début de la prestation</label>
@@ -87,21 +84,18 @@
 
   <label>Fin de la prestation</label>
   <input type="date" name="date_fin">
-<input type="hidden" name="form-name" value="devis">
 
   <!-- URGENCE -->
   <select name="urgence">
-    <option>Urgence ?</option>
+    <option value="">Urgence ?</option>
     <option>Non</option>
-    <option>Oui (rapide réponse souhaitée)</option>
+    <option>Oui (réponse rapide souhaitée)</option>
   </select>
 
   <!-- MESSAGE -->
-  <textarea name="message" placeholder="Précisions sur vos besoins (horaires, habitudes, etc.)"></textarea>
+  <textarea name="message" placeholder="Précisions sur vos besoins (horaires, habitudes, caractère de votre animal...)"></textarea>
 
   <button type="submit">Envoyer ma demande 🐾</button>
-
-
 
 </form>
 </section>
